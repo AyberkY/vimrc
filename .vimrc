@@ -12,9 +12,12 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 Plugin 'preservim/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'vim-airline/vim-airline'
@@ -30,6 +33,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " ##################### Personal Config and Mappings  ##########################
+"
 
 syntax enable
 set number
@@ -46,6 +50,16 @@ colorscheme sonokai
 " NERDTree convenience mappings
 nnoremap ,nt :NERDTree<CR>
 nnoremap ,ntt :NERDTreeToggle<CR>
+
+" Open NERDTree with vim
+let g:nerdtree_tabs_open_on_console_startup=1
+" Open NERDTree in the new tabs
+let g:nerdtree_tabs_open_on_new_tab=1
+let g:nerdtree_tabs_meaningful_tab_names=1
+let g:nerdtree_tabs_toggle=1
+let g:nerdtree_tabs_autoclose=1
+" Synchronize NERDTree's tabs
+let g:nerdtree_tabs_synchronize_view=1
 
 " ########################### CoC.nvim Config ##################################
 
